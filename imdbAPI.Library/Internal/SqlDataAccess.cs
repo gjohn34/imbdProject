@@ -1,4 +1,6 @@
 ﻿using Dapper;
+using Dapper.FluentColumnMapping;
+using imdbAPI.Library.Models;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
@@ -16,6 +18,17 @@ namespace imdbAPI.Library.Internal
         private static string GetConnectionString(string db)
         {
             return ConfigurationManager.ConnectionStrings[db].ConnectionString;
+        }
+        public static List<T> LoadWithForeign<T,U>(string db, Func<T, U, T> rule, string splitOn)
+        {
+            using (IDbConnection cn = new SqlConnection(GetConnectionString(db)))
+            {
+                cn.Open();
+                List<T> movies = cn.Query<T, U, T>("SELECT m.Id, m.Title, m.ReleaseYear, m.DirectorId, d.Id, d.FirstName, d.LastName from dbo.Movies as m INNER JOIN dbo.Directors as d ON m.DirectorId = d.Id", rule, splitOn: splitOn).ToList();
+                //splitOn: new { id: id}
+                return movies;
+
+            }
         }
 
         public static List<T> LoadData<T, U>(string storedProcedure, U parameters, string db)
