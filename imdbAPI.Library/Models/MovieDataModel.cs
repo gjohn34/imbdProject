@@ -14,7 +14,7 @@ namespace imdbAPI.Library.Models
         public string Title { get; set; }
         public int ReleaseYear { get; set; }
         public DateTime CreatedAt { get; set; }
-        public DirectorDataModel Director { get; set;}
         public DateTime UpdatedAt { get; set; }
+        public DirectorDataModel Director { get; set;}
     }
 }

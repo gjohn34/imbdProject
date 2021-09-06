@@ -16,13 +16,12 @@ namespace imdbAPI.Library.DataAccess
     {
         public static List<MovieDataModel> GetAll()
         {
-            return SqlDataAccess.LoadWithForeign<MovieDataModel, DirectorDataModel>("imbdDatabaseConnection", 
+            return SqlDataAccess.LoadWithForeign<MovieDataModel, DirectorDataModel, dynamic>("spGetAllMovies", 
                 (movie, director) => 
                 {
                     movie.Director = director;
                     return movie;
-                }, "DirectorId");
-            //return SqlDataAccess.LoadData<MovieDataModel, dynamic>("spGetAllMovies", new { }, "imbdDatabaseConnection");
+                }, new { }, "DirectorId", "imbdDatabaseConnection");
         }
 
         public static void Insert(MovieDataModel movie)
@@ -35,8 +34,11 @@ namespace imdbAPI.Library.DataAccess
             // TODO - Implement eager loading
             try
             {
-                MovieDataModel movie = SqlDataAccess.LoadData<MovieDataModel, dynamic>("spGetMovieById", new { Id = id }, "imbdDatabaseConnection").First();
-                //movie.Director = SqlDataAccess.LoadData<DirectorDataModel, dynamic>("spGetDirectorById", new { DirectorId = movie.DirectorId }, "imbdDatabaseConnection").First();
+                MovieDataModel movie = SqlDataAccess.LoadWithForeign<MovieDataModel, DirectorDataModel, dynamic>("spGetMovieById", (m, d) => 
+                {
+                    m.Director = d;
+                    return m;
+                }, new { Id = id }, "DirectorId", "imbdDatabaseConnection").First();
                 return movie;
             } catch
             {

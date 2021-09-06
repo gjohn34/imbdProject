@@ -19,14 +19,15 @@ namespace imdbAPI.Library.Internal
         {
             return ConfigurationManager.ConnectionStrings[db].ConnectionString;
         }
-        public static List<T> LoadWithForeign<T,U>(string db, Func<T, U, T> rule, string splitOn)
+        public static List<T> LoadWithForeign<T,U, P>(string storedProcedure, Func<T, U, T> rule, P parameters, string splitOn, string db)
         {
             using (IDbConnection cn = new SqlConnection(GetConnectionString(db)))
             {
                 cn.Open();
-                List<T> movies = cn.Query<T, U, T>("SELECT m.Id, m.Title, m.ReleaseYear, m.DirectorId, d.Id, d.FirstName, d.LastName from dbo.Movies as m INNER JOIN dbo.Directors as d ON m.DirectorId = d.Id", rule, splitOn: splitOn).ToList();
+                List<T> rows = cn.Query<T, U, T>(storedProcedure, rule, parameters, commandType: CommandType.StoredProcedure, splitOn: splitOn).ToList();
                 //splitOn: new { id: id}
-                return movies;
+                cn.Close();
+                return rows;
 
             }
         }
