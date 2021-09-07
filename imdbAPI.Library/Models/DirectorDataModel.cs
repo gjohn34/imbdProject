@@ -13,5 +13,6 @@ namespace imdbAPI.Library.Models
         public string LastName { get; set; }
         public DateTime CreatedAt { get; set; }
         public DateTime UpdatedAt { get; set; }
+        public List<MovieDataModel> movies { get; set;} = new List<MovieDataModel>();
     }
 }

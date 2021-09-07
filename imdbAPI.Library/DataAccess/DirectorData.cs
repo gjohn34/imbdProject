@@ -19,5 +19,24 @@ namespace imdbAPI.Library.DataAccess
         {
             SqlDataAccess.InsertData("spInsertDirector", director, "imbdDatabaseConnection");
         }
+        public static DirectorDataModel GetOne(int id)
+        {
+
+            var DirectorDictionary = new Dictionary<int, DirectorDataModel>();
+
+            return SqlDataAccess.LoadWithForeign<DirectorDataModel, MovieDataModel, dynamic>("spGetMovieById", 
+                (director, movie) => 
+                { 
+                    DirectorDataModel directorEntity;
+                    if (!DirectorDictionary.TryGetValue(movie.DirectorId, out directorEntity))
+                    {
+                        directorEntity = director;
+                        DirectorDictionary.Add(directorEntity.Id, directorEntity);
+                    }
+                    directorEntity.movies.Add(movie);
+                    return directorEntity;
+
+                }, new { Id = id }, "Id", "imbdDatabaseConnection").First();
+        }
     }
 }

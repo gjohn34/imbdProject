@@ -3,9 +3,9 @@
 AS
 BEGIN
 	set nocount on;
-	
-	SELECT m.Id, m.Title, m.ReleaseYear, m.CreatedAt, m.UpdatedAt, 
-	m.DirectorId, d.Id, d.FirstName, d.LastName, d.CreatedAt, d.UpdatedAt 
-	FROM dbo.Movies as m 
-	INNER JOIN dbo.Directors as d ON m.DirectorId = d.Id AND m.Id = @Id;
+
+	select 
+	[d].[Id], [d].[FirstName], [d].[LastName], [d].[CreatedAt], [d].[UpdatedAt], 
+	[m].[Id], [m].[Title], [m].[ReleaseYear], [m].[CreatedAt], [m].[UpdatedAt] 
+	from dbo.Directors as d Inner join dbo.Movies as m On m.DirectorId = d.Id AND d.Id = @Id;
 END

@@ -22,6 +22,12 @@ namespace imdbAPI.Controllers
         public void Insert([FromBody] DirectorDataModel director) 
         {
             DirectorData.Insert(director);
-        } 
+        }
+
+        [HttpGet]
+        public DirectorDataModel Get(int id)
+        {
+            return DirectorData.GetOne(id);
+        }
     }
 }
