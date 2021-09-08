@@ -29,6 +29,19 @@ namespace imdbAPI.Library.DataAccess
                 //<DirectorDataModel, dynamic>("spGetAllDirectors", new { }, "imbdDatabaseConnection");
         }
 
+        public static void Delete(int id)
+        {
+            // TODO - Rename insert to save - less confusing
+            SqlDataAccess.InsertData("spDeleteDirector", new { Id = id }, "imbdDatabaseConnection");
+        }
+
+        public static void Update(int id, DirectorDBModel director)
+        {
+            director.Id = id;
+            SqlDataAccess.InsertData("spUpdateDirector", director, "imbdDatabaseConnection");
+        }
+
+
         public static void Insert(DirectorDataModel director)
         {
             SqlDataAccess.InsertData("spInsertDirector", director, "imbdDatabaseConnection");

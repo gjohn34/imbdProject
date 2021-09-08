@@ -72,7 +72,9 @@
     <Compile Include="DataAccess\MovieData.cs" />
     <Compile Include="Internal\SqlDataAccess.cs" />
     <Compile Include="Models\DirectorDataModel.cs" />
+    <Compile Include="Models\DirectorDBModel.cs" />
     <Compile Include="Models\MovieDataModel.cs" />
+    <Compile Include="Models\MovieDBModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />

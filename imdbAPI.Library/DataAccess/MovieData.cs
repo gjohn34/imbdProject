@@ -28,7 +28,18 @@ namespace imdbAPI.Library.DataAccess
         {
             SqlDataAccess.InsertData("spInsertMovie", movie, "imbdDatabaseConnection");
         }
-            
+
+        public static void Update(int id, MovieDBModel movie)
+        {
+            movie.Id = id;
+            SqlDataAccess.InsertData("spUpdateMovie", movie, "imbdDatabaseConnection");
+        }
+
+        public static void Delete(int id)
+        {
+            SqlDataAccess.InsertData("spDeleteMovie", new { Id = id }, "imbdDatabaseConnection");
+        }
+
         public static MovieDataModel Get(int id)
         {
             // TODO - Implement eager loading

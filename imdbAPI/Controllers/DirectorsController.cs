@@ -19,7 +19,7 @@ namespace imdbAPI.Controllers
         }
         [HttpPost]
         [Authorize]
-        public void Insert([FromBody] DirectorDataModel director) 
+        public void Insert([FromBody] DirectorDataModel director)
         {
             DirectorData.Insert(director);
         }
@@ -28,6 +28,19 @@ namespace imdbAPI.Controllers
         public DirectorDataModel Get(int id)
         {
             return DirectorData.GetOne(id);
+        }
+
+        [HttpPut]
+        public void Update(int id, [FromBody] DirectorDBModel director)
+        {
+            // create director db model - no movies
+            DirectorData.Update(id, director);
+        }
+
+        [HttpDelete]
+        public void Delete(int id)
+        {
+            DirectorData.Delete(id);
         }
     }
 }

@@ -33,6 +33,19 @@ namespace imdbAPI.Controllers
             return MovieData.Get(id);
         }
 
+        [HttpPut]
+        public void Update(int id, [FromBody] MovieDBModel movie)
+        {
+            MovieData.Update(id, movie);
+        }
+
+        [HttpDelete]
+        public void Delete(int id)
+        {
+            MovieData.Delete(id);
+        }
+
+
         // GET: api/Movies/5
         //public string Get(int id)
         //{

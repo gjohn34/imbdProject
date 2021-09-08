@@ -69,6 +69,10 @@
     <Build Include="dbo\Stored Procedures\spGetAllDirectors.sql" />
     <Build Include="dbo\Stored Procedures\spInsertDirector.sql" />
     <Build Include="dbo\Stored Procedures\spInsertMovie.sql" />
+    <Build Include="dbo\Stored Procedures\spUpdateDirector.sql" />
+    <Build Include="dbo\Stored Procedures\spDeleteDirector.sql" />
+    <Build Include="dbo\Stored Procedures\spUpdateMovie.sql" />
+    <Build Include="dbo\Stored Procedures\spDeleteMovie.sql" />
   </ItemGroup>
   <ItemGroup>
     <RefactorLog Include="imbdDatabase.refactorlog" />
