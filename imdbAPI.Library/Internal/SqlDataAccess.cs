@@ -1,6 +1,6 @@
 ﻿using Dapper;
 using Dapper.FluentColumnMapping;
-using imdbAPI.Library.Models;
+using imbdAPI.Library.Models;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
@@ -11,7 +11,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace imdbAPI.Library.Internal
+namespace imbdAPI.Library.Internal
 {
     internal class SqlDataAccess
     {

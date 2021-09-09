@@ -2,7 +2,7 @@
 using System.ComponentModel.DataAnnotations;
 using Newtonsoft.Json;
 
-namespace imdbAPI.Models
+namespace imbdAPI.Models
 {
     // Models used as parameters to AccountController actions.
 

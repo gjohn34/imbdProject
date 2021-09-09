@@ -9,9 +9,9 @@ using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
 using Microsoft.Owin.Security.Cookies;
 using Microsoft.Owin.Security.OAuth;
-using imdbAPI.Models;
+using imbdAPI.Models;
 
-namespace imdbAPI.Providers
+namespace imbdAPI.Providers
 {
     public class ApplicationOAuthProvider : OAuthAuthorizationServerProvider
     {

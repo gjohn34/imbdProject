@@ -1,6 +1,6 @@
 using System;
 
-namespace imdbAPI.Areas.HelpPage.ModelDescriptions
+namespace imbdAPI.Areas.HelpPage.ModelDescriptions
 {
     /// <summary>
     /// Describes a type model.

@@ -1,5 +1,5 @@
-﻿using imdbAPI.Library.DataAccess;
-using imdbAPI.Library.Models;
+﻿using imbdAPI.Library.DataAccess;
+using imbdAPI.Library.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,7 +7,7 @@ using System.Net;
 using System.Net.Http;
 using System.Web.Http;
 
-namespace imdbAPI.Controllers
+namespace imbdAPI.Controllers
 {
     public class DirectorsController : ApiController
     {

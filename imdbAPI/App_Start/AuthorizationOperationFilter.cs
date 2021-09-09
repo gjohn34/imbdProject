@@ -5,7 +5,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Http.Description;
 
-namespace imdbAPI.App_Start
+namespace imbdAPI.App_Start
 {
     public class AuthorizationOperationFilter : IOperationFilter
     {

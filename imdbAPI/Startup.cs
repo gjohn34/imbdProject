@@ -4,9 +4,9 @@ using System.Linq;
 using Microsoft.Owin;
 using Owin;
 
-[assembly: OwinStartup(typeof(imdbAPI.Startup))]
+[assembly: OwinStartup(typeof(imbdAPI.Startup))]
 
-namespace imdbAPI
+namespace imbdAPI
 {
     public partial class Startup
     {

@@ -1,12 +1,12 @@
-﻿using imdbAPI.Library.Internal;
-using imdbAPI.Library.Models;
+﻿using imbdAPI.Library.Internal;
+using imbdAPI.Library.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace imdbAPI.Library.DataAccess
+namespace imbdAPI.Library.DataAccess
 {
     public class DirectorData
     {

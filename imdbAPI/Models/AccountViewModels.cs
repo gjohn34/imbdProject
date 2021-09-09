@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace imdbAPI.Models
+namespace imbdAPI.Models
 {
     // Models returned by AccountController actions.
 

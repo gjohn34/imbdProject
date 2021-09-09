@@ -13,11 +13,11 @@ using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
 using Microsoft.Owin.Security.Cookies;
 using Microsoft.Owin.Security.OAuth;
-using imdbAPI.Models;
-using imdbAPI.Providers;
-using imdbAPI.Results;
+using imbdAPI.Models;
+using imbdAPI.Providers;
+using imbdAPI.Results;
 
-namespace imdbAPI.Controllers
+namespace imbdAPI.Controllers
 {
     [Authorize]
     [RoutePrefix("api/Account")]

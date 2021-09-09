@@ -3,7 +3,7 @@ using System.Globalization;
 using System.Linq;
 using System.Reflection;
 
-namespace imdbAPI.Areas.HelpPage.ModelDescriptions
+namespace imbdAPI.Areas.HelpPage.ModelDescriptions
 {
     internal static class ModelNameHelper
     {

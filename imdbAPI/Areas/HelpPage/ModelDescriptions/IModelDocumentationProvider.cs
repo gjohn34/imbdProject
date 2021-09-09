@@ -1,7 +1,7 @@
 using System;
 using System.Reflection;
 
-namespace imdbAPI.Areas.HelpPage.ModelDescriptions
+namespace imbdAPI.Areas.HelpPage.ModelDescriptions
 {
     public interface IModelDocumentationProvider
     {

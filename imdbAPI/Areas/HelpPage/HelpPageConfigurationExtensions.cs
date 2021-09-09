@@ -11,10 +11,10 @@ using System.Net.Http.Headers;
 using System.Web.Http;
 using System.Web.Http.Controllers;
 using System.Web.Http.Description;
-using imdbAPI.Areas.HelpPage.ModelDescriptions;
-using imdbAPI.Areas.HelpPage.Models;
+using imbdAPI.Areas.HelpPage.ModelDescriptions;
+using imbdAPI.Areas.HelpPage.Models;
 
-namespace imdbAPI.Areas.HelpPage
+namespace imbdAPI.Areas.HelpPage
 {
     public static class HelpPageConfigurationExtensions
     {

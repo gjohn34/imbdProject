@@ -1,6 +1,6 @@
-﻿using imdbAPI.Library.DataAccess;
-using imdbAPI.Library.Models;
-using imdbAPI.Models;
+﻿using imbdAPI.Library.DataAccess;
+using imbdAPI.Library.Models;
+using imbdAPI.Models;
 using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
@@ -10,7 +10,7 @@ using System.Net.Http;
 using System.Web.Http;
 using System.Data;
 
-namespace imdbAPI.Controllers
+namespace imbdAPI.Controllers
 {
     //[Authorize]
     public class MoviesController : ApiController

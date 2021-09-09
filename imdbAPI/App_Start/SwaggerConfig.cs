@@ -1,12 +1,12 @@
 using System.Web.Http;
 using WebActivatorEx;
-using imdbAPI;
+using imbdAPI;
 using Swashbuckle.Application;
-using imdbAPI.App_Start;
+using imbdAPI.App_Start;
 
 [assembly: PreApplicationStartMethod(typeof(SwaggerConfig), "Register")]
 
-namespace imdbAPI
+namespace imbdAPI
 {
     public class SwaggerConfig
     {

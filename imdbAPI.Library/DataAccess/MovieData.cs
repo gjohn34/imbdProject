@@ -7,10 +7,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Dapper;
-using imdbAPI.Library.Internal;
-using imdbAPI.Library.Models;
+using imbdAPI.Library.Internal;
+using imbdAPI.Library.Models;
 
-namespace imdbAPI.Library.DataAccess
+namespace imbdAPI.Library.DataAccess
 {
     public class MovieData
     {

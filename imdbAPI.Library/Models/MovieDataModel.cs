@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace imdbAPI.Library.Models
+namespace imbdAPI.Library.Models
 {
     public class MovieDataModel
     {

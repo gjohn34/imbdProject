@@ -1,6 +1,6 @@
 using System.Collections.ObjectModel;
 
-namespace imdbAPI.Areas.HelpPage.ModelDescriptions
+namespace imbdAPI.Areas.HelpPage.ModelDescriptions
 {
     public class ComplexTypeModelDescription : ModelDescription
     {

@@ -321,9 +321,9 @@
     <Content Include="Scripts\jquery-3.6.0.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\imdbAPI.Library\imdbAPI.Library.csproj">
+    <ProjectReference Include="..\imdbAPI.Library\imbdAPI.Library.csproj">
       <Project>{8ec10326-5981-4bd1-aa8c-18335a57a37a}</Project>
-      <Name>imdbAPI.Library</Name>
+      <Name>imbdAPI.Library</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>

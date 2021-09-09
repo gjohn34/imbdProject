@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace imdbAPI.Library.Models
+namespace imbdAPI.Library.Models
 {
     public class DirectorDBModel
     {

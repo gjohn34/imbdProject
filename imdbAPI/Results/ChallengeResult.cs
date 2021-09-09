@@ -7,7 +7,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Web.Http;
 
-namespace imdbAPI.Results
+namespace imbdAPI.Results
 {
     public class ChallengeResult : IHttpActionResult
     {

@@ -2,9 +2,9 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Net.Http.Headers;
 using System.Web.Http.Description;
-using imdbAPI.Areas.HelpPage.ModelDescriptions;
+using imbdAPI.Areas.HelpPage.ModelDescriptions;
 
-namespace imdbAPI.Areas.HelpPage.Models
+namespace imbdAPI.Areas.HelpPage.Models
 {
     /// <summary>
     /// The model that represents an API displayed on the help page.

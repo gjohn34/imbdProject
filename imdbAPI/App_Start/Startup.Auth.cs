@@ -8,10 +8,10 @@ using Microsoft.Owin.Security.Cookies;
 using Microsoft.Owin.Security.Google;
 using Microsoft.Owin.Security.OAuth;
 using Owin;
-using imdbAPI.Providers;
-using imdbAPI.Models;
+using imbdAPI.Providers;
+using imbdAPI.Models;
 
-namespace imdbAPI
+namespace imbdAPI
 {
     public partial class Startup
     {

@@ -1,10 +1,10 @@
 using System;
 using System.Web.Http;
 using System.Web.Mvc;
-using imdbAPI.Areas.HelpPage.ModelDescriptions;
-using imdbAPI.Areas.HelpPage.Models;
+using imbdAPI.Areas.HelpPage.ModelDescriptions;
+using imbdAPI.Areas.HelpPage.Models;
 
-namespace imdbAPI.Areas.HelpPage.Controllers
+namespace imbdAPI.Areas.HelpPage.Controllers
 {
     /// <summary>
     /// The controller that will handle requests for the help page.
