@@ -31,6 +31,7 @@ namespace imdbAPI.Controllers
         }
 
         [HttpPut]
+        [Authorize]
         public void Update(int id, [FromBody] DirectorDBModel director)
         {
             // create director db model - no movies
@@ -38,6 +39,7 @@ namespace imdbAPI.Controllers
         }
 
         [HttpDelete]
+        [Authorize]
         public void Delete(int id)
         {
             DirectorData.Delete(id);

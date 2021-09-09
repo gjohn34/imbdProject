@@ -22,6 +22,7 @@ namespace imdbAPI.Controllers
         }
 
         [HttpPost]
+        [Authorize]
         public void Post([FromBody] MovieDataModel movie)
         {
             MovieData.Insert(movie);
@@ -34,12 +35,14 @@ namespace imdbAPI.Controllers
         }
 
         [HttpPut]
+        [Authorize]
         public void Update(int id, [FromBody] MovieDBModel movie)
         {
             MovieData.Update(id, movie);
         }
 
         [HttpDelete]
+        [Authorize]
         public void Delete(int id)
         {
             MovieData.Delete(id);
