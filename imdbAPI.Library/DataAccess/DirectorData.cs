@@ -25,7 +25,7 @@ namespace imbdAPI.Library.DataAccess
                     }
                     directorEntity.movies.Add(movie);
                     return directorEntity;
-                }, new { }, "Id", "imbdDatabaseConnection");
+                }, new { }, "Id", "imbdDatabaseConnection").Distinct().ToList();
                 //<DirectorDataModel, dynamic>("spGetAllDirectors", new { }, "imbdDatabaseConnection");
         }
 
