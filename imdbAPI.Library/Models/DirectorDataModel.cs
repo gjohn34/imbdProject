@@ -11,6 +11,7 @@ namespace imbdAPI.Library.Models
         public int Id { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
+        public string Bio { get; set; }
         public DateTime CreatedAt { get; set; }
         public DateTime UpdatedAt { get; set; }
         public List<MovieDataModel> movies { get; set;} = new List<MovieDataModel>();

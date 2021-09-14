@@ -15,7 +15,8 @@ namespace imbdAPI.Controllers
         [HttpGet]
         public List<DirectorDataModel> Get()
         {
-            return DirectorData.GetAll();
+            List<DirectorDataModel> data = DirectorData.GetAll();
+            return data;
         }
         [HttpPost]
         [Authorize]
@@ -27,7 +28,14 @@ namespace imbdAPI.Controllers
         [HttpGet]
         public DirectorDataModel Get(int id)
         {
-            return DirectorData.GetOne(id);
+            try
+            {
+                return DirectorData.GetOne(id);
+            }
+            catch 
+            {
+                throw;
+            }
         }
 
         [HttpPut]

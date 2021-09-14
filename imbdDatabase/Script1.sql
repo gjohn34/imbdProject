@@ -5,4 +5,4 @@ VALUES ('Orson', 'Welles'),
 
 
 Insert into dbo.Movies (DirectorId, Title, ReleaseYear)
-VALUES (1, 'Citizen Kane', 1941), (2, 'Gone with the wind', 1939), (3, 'Lawrence of Arabia', 1962);
+VALUES (1, 'Citizen Kane', 1941), (2, 'Gone with the wind', 1939), (3, 'Lawrence of Arabia', 1962), (2, 'King Kong', 1933);
